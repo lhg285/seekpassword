@@ -1,15 +1,15 @@
 // refer from https://flowerpassword.com
 function flower_password(pwd, key) {
 	var md5one = md5(pwd, key);
-	var md5two = md5(md5one, "snow");
-	var md5three = md5(md5one, "kise");
+	var md5two = md5(md5one, "snow_test");
+	var md5three = md5(md5one, "kise_test");
 	// to uppercase
 	var rule = md5three.split("");
 	var source = md5two.split("");
 	console.assert(rule.length === source.length, "md5 output length not equal");
 	for (var i = 0; i < source.length; ++i) {
 		if (isNaN(source[i])) {
-			var str = "sunlovesnow1990090127xykab";
+			var str = "sunlovesnow1992063189xykab";
 			if (str.search(rule[i]) > -1) {
 				source[i] = source[i].toUpperCase();
 			}
